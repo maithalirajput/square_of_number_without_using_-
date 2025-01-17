@@ -1,0 +1,29 @@
+public class square_of_number_without_mul {
+    public static void main(String[] args) {
+        System.out.println(square(-5));
+        
+    }
+    static int square(int n){
+        n=Math.abs(n);
+        int data = n;
+        int i=0;
+        int res = 0;
+        while(data!=0){
+            if((data&1)==1){
+               res +=n<<i;
+            }
+            i++;
+            data = data>>1;
+        }
+        return res;
+
+    }
+    
+}
+
+// 3 = 9
+// 11 = 1001
+// n*11
+// n(2^1+2^0)
+// n*2^1 + n*2^0
+// n<<1 + n<<0
