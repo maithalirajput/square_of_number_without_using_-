@@ -1,0 +1,1 @@
+# square_of_number_without_using_-
